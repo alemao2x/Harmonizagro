@@ -30,13 +30,14 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(MainActivity.this, SearchActivity.class);
-                //startActivity(intent);
-                EditText pesq = (EditText)findViewById(R.id.edtPesq);
+                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(intent);
+                /*EditText pesq = (EditText)findViewById(R.id.edtPesq);
                 pesq.setVisibility(View.VISIBLE);
                 if(!pesq.hasFocus()==true){
                     pesq.setVisibility(View.INVISIBLE);
-                }
+                }*/
+
             }
         });
 
