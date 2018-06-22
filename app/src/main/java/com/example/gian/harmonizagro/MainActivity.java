@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,8 +30,13 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                //startActivity(intent);
+                EditText pesq = (EditText)findViewById(R.id.edtPesq);
+                pesq.setVisibility(View.VISIBLE);
+                if(!pesq.hasFocus()==true){
+                    pesq.setVisibility(View.INVISIBLE);
+                }
             }
         });
 
