@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "1084388502544",
+    "firebase_url": "https://harmonizagro.firebaseio.com",
+    "project_id": "harmonizagro",
+    "storage_bucket": "harmonizagro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084388502544:android:32cf4097268ee650",
+        "android_client_info": {
+          "package_name": "com.example.gian.harmonizagro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084388502544-i6ub4f0kr6hjcfs52fe7t4kbs84q12kj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gian.harmonizagro",
+            "certificate_hash": "592f946e4bb6fad13892e0dafd4ef09face4456b"
+          }
+        },
+        {
+          "client_id": "1084388502544-o5vp7a8ubjefvtp8d0g09uac7bimucpj.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1084388502544-o5vp7a8ubjefvtp8d0g09uac7bimucpj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTsS75pFyAEZWlibg2koIb1KVzvpyJtiw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084388502544-o5vp7a8ubjefvtp8d0g09uac7bimucpj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
