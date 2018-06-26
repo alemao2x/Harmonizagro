@@ -9,14 +9,15 @@
 
     <EditText
         android:id="@+id/edtPesq"
-        android:layout_width="347dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorPrimary"
         android:ems="10"
         android:hint="Pesquisa"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"

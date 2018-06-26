@@ -1,9 +1,13 @@
 package com.example.gian.harmonizagro;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -38,6 +42,8 @@ public class SearchActivity extends AppCompatActivity {
         initFirebase();
         initComponents();
         eventPesq();
+        selecionaItem();
+        getSupportActionBar().setTitle("Pesquisa");
     }
 
     private void eventPesq() {
@@ -62,11 +68,7 @@ public class SearchActivity extends AppCompatActivity {
 
     private void buscaCod(String busca) {
         Query query;
-        if(busca.equals("")){
-            query = databaseReference.child("Item").orderByChild("codigo");
-        }else{
             query = databaseReference.child("Item").orderByChild("codigo").startAt(busca).endAt(busca+"\uf8ff");
-        }
 
         listItem.clear();
 
@@ -78,7 +80,7 @@ public class SearchActivity extends AppCompatActivity {
                     listItem.add(i);
                 }
 
-                arrayAdapterItem = new ArrayAdapter<Item>(SearchActivity.this,android.R.layout.simple_list_item_1,listItem);
+                arrayAdapterItem = new ArrayAdapter<Item>(SearchActivity.this,android.R.layout.select_dialog_item,listItem);
                 listV_Pesquisa.setAdapter(arrayAdapterItem);
             }
 
@@ -90,6 +92,17 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
+     private void selecionaItem(){
+        listV_Pesquisa.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(SearchActivity.this,DisplayActivity.class);
+                intent.putExtra("codigo",listItem.get(position));
+                startActivity(intent);
+            }
+        });
+     }
+
     private void initFirebase() {
         FirebaseApp.initializeApp(SearchActivity.this);
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -100,12 +113,5 @@ public class SearchActivity extends AppCompatActivity {
         edtPesq = findViewById(R.id.edtPesq);
         listV_Pesquisa = findViewById(R.id.listV_Pesquisa);
         
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        buscaCod("");
-
     }
 }

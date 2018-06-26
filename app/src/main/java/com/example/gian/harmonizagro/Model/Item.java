@@ -1,13 +1,15 @@
 package com.example.gian.harmonizagro.Model;
 
-public class Item {
-    private String codigo;
-    private String codPai;
-    private String desc;
-    private boolean folha;
-    private int nivel;
+import java.io.Serializable;
 
-    public Item() {
+public class Item implements Serializable{
+    private String codigo;
+    private String codigoPai;
+    private String descricao;
+    private Boolean ehFolha;
+    private Long nivel;
+
+    public Item(){
     }
 
     public String getCodigo() {
@@ -18,40 +20,40 @@ public class Item {
         this.codigo = codigo;
     }
 
-    public String getCodPai() {
-        return codPai;
+    public String getCodigoPai() {
+        return codigoPai;
     }
 
-    public void setCodPai(String codPai) {
-        this.codPai = codPai;
+    public void setCodigoPai(String codigoPai) {
+        this.codigoPai = codigoPai;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
-    public boolean isFolha() {
-        return folha;
+    public boolean isEhFolha() {
+        return ehFolha;
     }
 
-    public void setFolha(boolean folha) {
-        this.folha = folha;
+    public void setEhFolha(boolean ehFolha) {
+        this.ehFolha = ehFolha;
     }
 
-    public int getNivel() {
+    public long getNivel() {
         return nivel;
     }
 
-    public void setNivel(int nivel) {
+    public void setNivel(long nivel) {
         this.nivel = nivel;
     }
 
     @Override
     public String toString() {
-        return codigo;
+        return ""+codigo+"\n"+descricao;
     }
 }

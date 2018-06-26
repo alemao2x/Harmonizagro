@@ -12,9 +12,5 @@
         android:id="@+id/suporte"
         android:icon="@drawable/ic_info_icon"
         android:title="Suporte" />
-        <item
-            android:id="@+id/compartilhar"
-            android:icon="@drawable/ic_share_icon"
-            android:title="Compartilhar" />
     </group>
 </menu>
