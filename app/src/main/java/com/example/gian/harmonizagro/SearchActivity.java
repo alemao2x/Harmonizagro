@@ -112,6 +112,5 @@ public class SearchActivity extends AppCompatActivity {
     private void initComponents() {
         edtPesq = findViewById(R.id.edtPesq);
         listV_Pesquisa = findViewById(R.id.listV_Pesquisa);
-        
     }
 }

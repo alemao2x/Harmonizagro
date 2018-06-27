@@ -22,7 +22,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayActivity" />
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".SearchActivity" />
+        <activity
+            android:name=".Sobre"
+            android:label="@string/title_activity_sobre"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
